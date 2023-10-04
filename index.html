@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/73b687bde0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>NATIONPEDIA</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <div class="headerContent container">
+          <div class="logo">
+            <h1 class="logoTitle">NATIONPEDIA</h1>
+            <h1 class="logoText">\\WHERE IN THE WORLD</h1>
+          </div>
+          <button class="viewModeButton">
+            <div class="viewModeButtonContent">
+              <i class="fa-regular fa-moon viewModeIcon"></i>
+              <p>Dark Mode</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="searchDropdown container">
+        <div class="searchWrapper">
+          <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+          <input
+            class="searchBar"
+            placeholder="Search for a country..."
+            onchange="searchCountry()"
+          />
+        </div>
+        <div class="dropdown">
+          <button class="dropdownButton">
+            <div class="dropdownButtonContent">
+              <p>Filter by Region</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="countryCards container"></div>
+    </div>
+    <script src="/js/countries.js"></script>
+    <script src="/js/searchBar.js"></script>
+  </body>
+</html>

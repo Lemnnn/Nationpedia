@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* THE WIDTH TO ADD TO EVERY SECTION */
+.container {
+  width: 90%;
+}
+
+/* STYLE FOR THE PAGE CONTENT */
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER STYLE */
+.header {
+  width: 100%;
+  padding: 15px 0px;
+  box-shadow: rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.headerContent {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.logoTitle {
+  font-weight: 700;
+}
+
+.logoText {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.viewModeButton {
+  background: transparent;
+  border: none;
+}
+
+.viewModeButtonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.viewModeButtonContent p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.viewModeIcon {
+  color: black;
+  font-size: 25px;
+}
+
+/* STYLE FOR SEARCH BAR AND DROPDOWN MENU */
+.searchDropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.searchBar {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 300px;
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 5px;
+  font-size: 16px;
+}
+
+.searchWrapper i {
+  position: absolute;
+  font-size: 25px;
+  padding: 7px;
+}
+
+.dropdownButton {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  height: 40px;
+  width: 180px;
+  background: transparent;
+  border: none;
+}
+
+.dropdownButtonContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+}
+
+/* COUNTRY CARD STYLE */
+
+.countryCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding-top: 60px;
+}
+
+.countryCard {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.countryFlag {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 200px;
+}
+
+.country {
+  padding: 15px;
+}
+
+.countryDetails {
+  padding-left: 15px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
