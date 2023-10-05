@@ -29,24 +29,21 @@
       <div class="searchDropdown container">
         <div class="searchWrapper">
           <i class="fa-solid fa-magnifying-glass searchIcon"></i>
-          <input
-            class="searchBar"
-            placeholder="Search for a country..."
-            onchange="searchCountry()"
-          />
+          <input class="searchBar" placeholder="Search for a country..." />
         </div>
-        <div class="dropdown">
-          <button class="dropdownButton">
-            <div class="dropdownButtonContent">
-              <p>Filter by Region</p>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-          </button>
-        </div>
+        <select name="Filter by Region" class="dropdown">
+          <option value="" disabled selected>Filter by Region</option>
+          <option value="">None</option>
+          <option value="Americas">Americas</option>
+          <option value="Europe">Europe</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="Oceania">Oceania</option>
+        </select>
       </div>
       <div class="countryCards container"></div>
     </div>
-    <script src="/js/countries.js"></script>
-    <script src="/js/searchBar.js"></script>
+    <!-- <script src="/js/countries.js"></script> -->
+    <script src="/js/country.js"></script>
   </body>
 </html>
