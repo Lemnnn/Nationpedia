@@ -66,6 +66,7 @@ const main = async () => {
   await countries.fetchCountries();
   const input = document.querySelector(".searchBar");
   const dropdown = document.querySelector(".dropdown");
+  const viewMode = document.querySelector(".viewModeButton");
 
   countries.printCountries();
 
@@ -75,6 +76,15 @@ const main = async () => {
 
   dropdown.addEventListener("change", (e) => {
     countries.handelFilter(countries.getName(), e.target.value);
+  });
+
+  viewMode.addEventListener("click", () => {
+    document.body.classList.toggle("darkMode");
+    if (document.body.classList.contains("darkMode")) {
+      viewMode.textContent = "Light Mode";
+    } else {
+      viewMode.textContent = "Dark Mode";
+    }
   });
 };
 
