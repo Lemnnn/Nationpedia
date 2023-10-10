@@ -32,8 +32,12 @@ class Program {
   displayCountries(countries) {
     const countryCards = document.querySelector(".countryCards");
 
-    const contriesHTML = countries.map(
-      (country) => `
+    const contriesHTML = countries.map((country) => {
+      const encodedCountryName = encodeURIComponent(
+        country.name.common.toLowerCase()
+      );
+      return `
+      <a class="cardLink" href="country.html?country=${encodedCountryName}">
         <div class="countryCard">
           <img class="countryFlag" src="${country.flags.png}" />
           <h2 class="country">${country.name.common}</h2>
@@ -45,8 +49,9 @@ class Program {
             }</p>
           </div>
         </div>
-     `
-    );
+      </a>
+     `;
+    });
 
     countryCards.innerHTML = contriesHTML.join("");
   }

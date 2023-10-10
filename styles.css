@@ -168,3 +168,7 @@
   padding-bottom: 40px;
   gap: 8px;
 }
+
+.cardLink {
+  text-decoration: none;
+}
