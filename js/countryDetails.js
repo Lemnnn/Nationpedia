@@ -14,11 +14,51 @@ class CountryDetails {
 
   async displayCountryDetails(countryName) {
     await this.fetchCountryData(countryName);
+
+    const currencies = this.data.currencies;
+    let currencyName;
+
+    for (const currencyKey in currencies) {
+      if (currencies.hasOwnProperty(currencyKey)) {
+        const currencyInfo = currencies[currencyKey];
+        currencyName = currencyInfo.name;
+      }
+    }
+
+    const languages = this.data.languages;
+    let languageName = [];
+
+    for (const languageKey in languages) {
+      if (languages.hasOwnProperty(languageKey)) {
+        languageName.push(" " + languages[languageKey]);
+      }
+    }
+
     this.countryDetails.innerHTML = `
-                <h1>${this.data.name.common}</h1>
-                <p>Capital: ${this.data.capital}</p>
-                <p>Population: ${this.data.population}</p>
-                <p>Region: ${this.data.region}</p>
+            <div class="countryDetailsContainer">
+              <img class="countryDetailsFlag" src="${this.data.flags.png}" />
+              <div class="countryDetailsTextContainer">
+                <h1><b>${this.data.name.common}</b></h1>
+                <div class="countryDetailsContent">
+                  <div class="row">
+                    <p><b>Population:</b> ${this.data.population.toLocaleString(
+                      "en-US"
+                    )}</p>
+                    <p><b>Area:</b> ${this.data.area.toLocaleString(
+                      "en-US"
+                    )} km²</p>
+                    <p><b>Region:</b> ${this.data.region}</p>
+                    <p><b>Sub Region:</b> ${this.data.subregion}</p>
+                    </div>
+                    <div class="row">
+                    <p><b>Capital:</b> ${this.data.capital}</p>
+                    <p><b>Top Level Domain:</b> ${this.data.tld[0]}</p>
+                    <p><b>Currency:</b> ${currencyName}</p>
+                    <p><b>Languages:</b> ${languageName}</p>
+                    </div>
+                </div>
+              </div>
+            </div>
           `;
   }
 }

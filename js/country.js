@@ -40,11 +40,13 @@ class Program {
       <a class="cardLink" href="country.html?country=${encodedCountryName}">
         <div class="countryCard">
           <img class="countryFlag" src="${country.flags.png}" />
-          <h2 class="country">${country.name.common}</h2>
+          <h2 class="country"><b>${country.name.common}</b></h2>
           <div class="countryDetails">
-            <p>Population: ${country.population.toLocaleString("en-US")}</p>
-            <p>Region: ${country.region}</p>
-            <p>Capital: ${
+            <p><b>Population:</b> ${country.population.toLocaleString(
+              "en-US"
+            )}</p>
+            <p><b>Region:</b> ${country.region}</p>
+            <p><b>Capital:</b> ${
               country.capital ? country.capital : " Has no capital"
             }</p>
           </div>
